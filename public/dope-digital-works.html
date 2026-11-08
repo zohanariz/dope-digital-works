@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dope Digital Works landing page (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f5f5;--card:#ffffff;--line:#e6e1dd;--ink:#000000;--body:#000000;--peach:#F1CC9D;--peach2:#F1CC9D;--orange:#5F978E;--mint:#A5D7C9;--red:#E94344;--red2:#9B121E;--btn:#593C32;--btn-ink:#ffffff;--glow:rgba(241,204,157,.95);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--body);font:400 16px/1.6 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3,p,ul{margin:0}
+h1,h2,h3{color:var(--ink);letter-spacing:-.03em;line-height:1.08;font-weight:600}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--btn);color:var(--btn-ink);font-weight:700;font-size:15px;text-decoration:none;padding:8px 8px 8px 24px;border-radius:999px;box-shadow:0 8px 22px rgba(36,25,5,.22)}
+.btn.sm{padding:6px 6px 6px 18px;font-size:14px;box-shadow:none}
+.btn i{width:36px;height:36px;border-radius:50%;background:linear-gradient(145deg,#a07e70,#3d2a22);display:grid;place-items:center;font-style:normal;font-size:20px;color:#fff;line-height:1}
+.btn.sm i{width:30px;height:30px;font-size:17px}
+.btn:hover{transform:translateY(-1px)}
+.out{display:inline-block;border:1.5px solid var(--ink);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none;padding:11px 22px;border-radius:999px}
+.c{text-align:center}
+h2{font-size:clamp(30px,4.2vw,46px)}
+.c h2{max-width:20ch;margin-left:auto;margin-right:auto}
+.c h2.two{max-width:none;font-size:clamp(20px,3.3vw,38px)}.two span{display:block;white-space:nowrap}@media (max-width:760px){.two span{display:inline;white-space:normal}.c h2.two{font-size:26px}}.lead{max-width:58ch;margin:16px auto 0;font-size:17px}
+section.s{padding:128px 0 0}
+/* nav */
+.nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:10;max-width:1060px;margin:14px auto 0;padding:10px 12px 10px 28px;background:var(--card);border-radius:999px;box-shadow:0 6px 24px rgba(36,25,5,.08);display:flex;align-items:center;justify-content:space-between;width:calc(100% - 32px)}
+.logo{font-weight:700;font-size:22px;color:var(--ink);letter-spacing:-.03em;display:flex;align-items:center;gap:8px}
+.logo b{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--bg);font-size:15px}
+.nav ul{display:flex;gap:28px;list-style:none;padding:0;font-size:14px;font-weight:500;color:var(--ink)}
+.nav ul a{text-decoration:none}
+/* hero */
+.hero{text-align:center;padding:64px 0 0;margin-top:-84px;padding-top:150px;background:radial-gradient(ellipse 55% 300px at 50% 0%,rgba(241,204,157,.75),transparent 72%),radial-gradient(circle 380px at 6% 0%,rgba(165,215,201,.65),transparent 72%),radial-gradient(circle 380px at 94% 0%,rgba(241,204,157,.6),transparent 72%),linear-gradient(180deg,#ffffff 0%,#f5f5f5 45%,var(--glow) 100%)}
+.chip{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-size:13px;font-style:italic;font-weight:600;padding:6px 14px;border-radius:999px}
+.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:#E94344}
+.hero .wrap{max-width:1340px}.hero h1{font-size:min(calc((100vw - 64px)/24),58px);font-weight:900;letter-spacing:-.04em;max-width:none;margin:0 auto 22px;white-space:nowrap}.hero h1 span{display:block}
+.hero .sub{max-width:50ch;margin:0 auto 34px;font-size:17px}
+.cta{display:inline-block;position:relative;line-height:0}
+.vsl{max-width:760px;margin:0 auto 38px;aspect-ratio:16/9;border-radius:24px;position:relative;overflow:hidden;background:linear-gradient(135deg,#593C32,#3d2a22);box-shadow:0 24px 60px rgba(89,60,50,.28);display:grid;place-items:center}.vsl::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 125%,rgba(241,204,157,.6),transparent 62%)}.vsl-in{position:relative;text-align:center;color:#fff}.play{width:84px;height:84px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;margin:0 auto 16px;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3)}.play svg{width:34px;height:34px;fill:var(--ink);margin-left:4px}.vsl-in p{font-weight:600;font-size:15px;color:#fff}.free{font-family:"Caveat",cursive;font-size:24px;color:#000000;position:absolute;left:100%;top:50%;margin-left:18px;transform:translateY(-50%) rotate(-6deg);white-space:nowrap;line-height:1;display:inline-flex;align-items:center;gap:6px}
+.free svg{width:54px;height:26px;stroke:var(--red2);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero .note{margin-top:20px;font-size:13.5px;font-weight:600;color:var(--ink)}
+.pills{display:flex;gap:12px;justify-content:center;margin-top:64px;overflow:hidden;flex-wrap:wrap;padding:0 16px}
+.pills span{background:rgba(255,255,255,.55);border:1px solid rgba(36,25,5,.14);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap}
+.pills span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--orange);margin-right:8px;opacity:.85}
+.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;text-align:left;padding:48px 0 80px}
+.checks div::before{content:"✓";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:12px;font-weight:700;margin-bottom:12px}
+.checks b{display:block;color:var(--ink);font-size:18px;line-height:1.3;font-weight:600;letter-spacing:-.02em}
+.checks p{font-size:14.5px;margin-top:6px;color:var(--ink)}
+/* built for */
+.built{padding:56px 0 0;text-align:center}
+.built p{font-size:14px;margin-bottom:18px}
+.built div{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 34px;font-weight:700;font-size:19px;color:var(--ink);opacity:.75;letter-spacing:-.02em}
+/* cards */
+.grid{display:grid;gap:18px;margin-top:56px;text-align:left}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:14.5px}
+#solve .card{border:2px solid transparent;background:linear-gradient(#ffffff,#ffffff) padding-box,linear-gradient(150deg,#F1CC9D 0%,#A5D7C9 55%,#F1CC9D 100%) border-box;box-shadow:0 12px 32px rgba(241,204,157,.5),0 2px 8px rgba(165,215,201,.35)}.svc{background:linear-gradient(180deg,#ffffff 38%,rgba(241,204,157,.9) 190%)}.c h2.bold{font-weight:800}.fit .yes{border:2px solid transparent;background:linear-gradient(180deg,#ffffff 30%,#bfe3d6 150%) padding-box,linear-gradient(150deg,#A5D7C9,#5F978E) border-box;box-shadow:0 12px 32px rgba(95,151,142,.28)}.fit .no{border:2px solid transparent;background:linear-gradient(180deg,#ffffff 30%,#f8c4c4 150%) padding-box,linear-gradient(150deg,#f4a0a1,#E94344) border-box;box-shadow:0 12px 32px rgba(233,67,68,.2)}.u{text-decoration:none;background:none;padding:0}.js .rv{opacity:0;translate:0 22px;transition:opacity .5s ease-out var(--d,0s),translate .55s cubic-bezier(.22,.61,.36,1) var(--d,0s)}.js .rv.in{opacity:1;translate:0 0}.js .rv.card{transition:opacity .5s ease-out var(--d,0s),translate .55s cubic-bezier(.22,.61,.36,1) var(--d,0s),transform .3s ease,box-shadow .3s ease}.card{transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(89,60,50,.16)}#solve .card:hover{box-shadow:0 20px 44px rgba(241,204,157,.8),0 4px 12px rgba(165,215,201,.5)}.fit .yes:hover{box-shadow:0 20px 44px rgba(95,151,142,.42)}.fit .no:hover{box-shadow:0 20px 44px rgba(233,67,68,.3)}.ico{transition:transform .35s ease}.card:hover .ico{transform:translateY(-3px) rotate(-8deg) scale(1.06)}.btn,.btn i{transition:transform .25s ease}.btn:hover i{transform:translateX(4px)}.play{position:relative;transition:transform .25s ease}.play:hover{transform:scale(1.08)}.play::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #fff;animation:pl 2.2s ease-out infinite}@keyframes pl{from{transform:scale(1);opacity:.75}to{transform:scale(1.7);opacity:0}}.st{animation:fl 4.5s ease-in-out infinite}.st:nth-child(2){animation-delay:-1.2s}.st:nth-child(3){animation-delay:-2.4s}.st:nth-child(4){animation-delay:-3.4s}@keyframes fl{50%{translate:0 -7px}}.pills span{transition:transform .25s ease}.pills span:hover{transform:translateY(-3px)}.step{transition:background .3s ease,transform .3s ease}.step:hover{transform:translateX(6px)}@media (prefers-reduced-motion:reduce){.js .rv{opacity:1!important;translate:none!important;transition:none!important}.st,.play::after{animation:none}.card:hover,.step:hover{transform:none}}.btn{--rc:rgba(89,60,50,.5);animation:shk 1.6s ease-in-out infinite,ring 1.6s ease-out infinite}.dark .btn{--rc:rgba(255,255,255,.55)}.btn:hover{animation:none}.nav .btn{animation:none}.logo{white-space:nowrap;line-height:1;text-decoration:none}@media (max-width:560px){.logo{font-size:16px}.logo b{width:24px;height:24px;font-size:13px}.nav{padding-left:16px}}@keyframes shk{0%,50%,100%{transform:none}6%{transform:translateX(-7px) rotate(-2deg)}12%{transform:translateX(7px) rotate(2deg)}18%{transform:translateX(-6px) rotate(-1.5deg)}24%{transform:translateX(6px) rotate(1.5deg)}30%{transform:translateX(-3px) rotate(-.8deg)}36%{transform:translateX(3px) rotate(.8deg)}42%{transform:none}}@keyframes ring{0%{box-shadow:0 8px 22px rgba(36,25,5,.22),0 0 0 0 var(--rc)}60%,100%{box-shadow:0 8px 22px rgba(36,25,5,.22),0 0 0 18px transparent}}@media (prefers-reduced-motion:reduce){.btn{animation:none}}.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:center;text-align:left}
+.about figure{margin:0;border-radius:32px;padding:10px;background:linear-gradient(180deg,#ffffff,#F1CC9D);box-shadow:0 24px 60px rgba(241,204,157,.6)}
+.about img{display:block;width:100%;height:auto;border-radius:24px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.about h2{max-width:14ch;font-size:clamp(30px,4.2vw,46px);font-weight:800}
+.about .lead{margin:20px 0 0;max-width:52ch;font-size:18px}
+.at{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px;font-size:14px;font-weight:700;color:var(--ink)}
+.at span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 16px;display:inline-flex;align-items:center;gap:8px}.at svg{display:block;height:18px;width:auto;flex:none}
+.ast{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 36px}
+.ast .card{padding:18px}
+.ast b{display:block;font-size:30px;letter-spacing:-.03em;color:var(--ink);font-weight:800;line-height:1}
+.ast span{display:block;margin-top:8px;font-size:13.5px;line-height:1.4}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}.about figure{max-width:420px;margin:0 auto}.about h2{max-width:none}}
+@media (max-width:560px){.ast{grid-template-columns:1fr}}
+.path .pv{display:block;min-height:0;padding:38px 36px;text-align:left;background:linear-gradient(180deg,#ffffff 0%,#fbf4ea 45%,#F1CC9D 200%);box-shadow:0 16px 44px rgba(241,204,157,.45)}
+.tl small{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.tl>b{display:block;font-size:clamp(40px,5vw,60px);font-weight:900;letter-spacing:-.04em;color:var(--ink);line-height:1;margin:10px 0 8px}
+.tl>p{margin:0 0 30px;font-size:15px}
+.tl ol{list-style:none;margin:0;padding:0}
+.tl li{display:flex;gap:16px;align-items:flex-start;padding-bottom:24px;position:relative}
+.tl li:last-child{padding-bottom:0}
+.tl li:not(:last-child)::before{content:"";position:absolute;left:15px;top:34px;bottom:2px;width:2px;background:#e6c08c}
+.tl li i{flex:none;width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid #F1CC9D;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px;color:var(--ink);position:relative;z-index:1}
+.tl li.live i{background:var(--ink);border-color:var(--ink);color:#fff}
+.tl li strong{display:block;color:var(--ink);font-size:16px;line-height:1.3}
+.tl li span{font-size:13.5px}
+.bah{font-size:clamp(24px,2.8vw,32px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.1;margin:10px 0 24px}
+.ba{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:12px;box-shadow:0 4px 14px rgba(89,60,50,.06)}
+.ba:last-child{margin-bottom:0}
+.ba .b,.ba .a{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.4}
+.ba .b::before{content:"\2715";color:#E94344;font-weight:800;flex:none}
+.ba .a{margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);font-weight:700;color:var(--ink)}
+.ba .a::before{content:"\2713";color:#5F978E;font-weight:800;flex:none}
+.path{max-width:none}.path .steps{grid-template-columns:1fr;gap:18px;max-width:920px;margin:0 auto;align-content:stretch}.path .step,.path .step.on{padding:30px 34px;display:grid;grid-template-columns:48px 1fr;column-gap:26px;align-items:start;border:1px solid var(--line);border-radius:24px;background:linear-gradient(90deg,#ffffff 35%,rgba(241,204,157,.95) 190%);box-shadow:0 10px 28px rgba(241,204,157,.4)}.path .step::before,.path .step.on::before{position:static;display:grid;grid-row:1/span 2;width:48px;height:48px;font-size:16px;margin:0;background:var(--ink);color:#fff}.path .step h3{grid-column:2;font-size:22px;margin:2px 0 8px}.path .step p{grid-column:2}.path .step:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(241,204,157,.8)}.js .path .rv.step{transition:opacity .5s ease-out var(--d,0s),translate .55s cubic-bezier(.22,.61,.36,1) var(--d,0s),transform .3s ease,box-shadow .3s ease}@media (max-width:560px){.path .step,.path .step.on{padding:22px 20px;grid-template-columns:40px 1fr;column-gap:16px}.path .step::before,.path .step.on::before{width:40px;height:40px}}.tri{text-align:center;padding:30px 26px 26px}
+.tri h3{font-size:25px}
+.tri p{margin-bottom:20px}
+.panel{margin-top:26px;height:210px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card) 35%,var(--peach) 150%);overflow:hidden;position:relative;display:grid;place-items:center}
+.st{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--ink);box-shadow:0 4px 12px rgba(36,25,5,.07)}
+.st::after{content:"×";position:absolute;right:-8px;top:-8px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;font-size:13px;display:grid;place-items:center}
+.mini{width:86%;text-align:left;display:grid;gap:8px}
+.mini div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12.5px;color:var(--ink);font-weight:600}
+.mini div::before{content:attr(data-n);display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--peach2);color:var(--ink);font-size:11px;margin-right:8px}
+.bk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-align:left;font-size:13px;box-shadow:0 8px 20px rgba(36,25,5,.08)}
+.bk b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+.bk span{display:block;padding:2px 0}.bk span::before{content:"✓ ";color:var(--orange);font-weight:700}
+.ico{width:44px;height:44px;border-radius:12px;background:linear-gradient(180deg,#fff 20%,var(--peach));box-shadow:0 2px 6px rgba(89,60,50,.12);display:grid;place-items:center;margin-bottom:18px;color:var(--ink)}
+.ico svg{width:20px;height:20px}
+.pull{margin:64px auto 0;max-width:30ch;font-size:clamp(24px,3vw,34px);color:var(--ink);font-weight:600;letter-spacing:-.03em;line-height:1.15;text-align:center}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px;align-items:center}
+.card .more{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--ink)}
+/* path */
+.path{display:grid;grid-template-columns:1fr;max-width:820px;margin:56px auto 0;text-align:left}
+.pv{border-radius:28px;background:linear-gradient(180deg,#faf6f0 0%,var(--peach) 150%);border:1px solid var(--line);display:grid;place-items:center;padding:30px;min-height:340px}
+.pv svg{width:70%;max-width:260px;fill:none;stroke:var(--peach);stroke-width:14}
+.pv text{fill:var(--ink);stroke:none;font-weight:700;font-size:18px}
+.steps{display:grid;gap:0;align-content:center}
+.step{padding:20px 4px 20px 56px;position:relative;border-bottom:1px solid var(--line)}
+.step::before{content:attr(data-n);position:absolute;left:0;top:20px;width:34px;height:34px;border-radius:50%;background:var(--peach2);color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:14px}
+.step.on{background:linear-gradient(90deg,transparent,rgba(241,204,157,.55));border-radius:16px;border:0}
+.step.on::before{background:var(--ink);color:var(--bg)}
+.step h3{font-size:20px;margin-bottom:4px}
+.step p{font-size:14.5px}
+.step ul{list-style:none;padding:8px 0 0;font-size:13px;font-weight:600;color:var(--ink)}
+.step li::before{content:"✓ ";color:var(--orange)}
+.res{margin-top:104px;max-width:940px;margin-left:auto;margin-right:auto;text-align:center}
+.res b{display:block;font-size:clamp(26px,3.8vw,44px);font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}
+/* dark cta */
+.dark{background:#593C32;color:#fff;border-radius:36px;padding:72px 28px 64px;text-align:center;position:relative;overflow:hidden}
+.dark::before{content:"";position:absolute;inset:0;background:conic-gradient(from 200deg at 70% 85%,rgba(255,255,255,.05),transparent 25%,rgba(255,255,255,.04) 50%,transparent 75%);pointer-events:none}
+.dark>*{position:relative}
+.dark h2{color:#fff;max-width:18ch;margin:0 auto}
+.dark .lead{color:#e8dfd0}
+.dark h3{color:#fff;font-size:15px;margin:34px 0 14px}
+.dark ul{list-style:none;padding:0;display:grid;width:fit-content;margin:0 auto;gap:10px;text-align:left;font-size:14.5px;font-weight:600;color:#fff}
+.dark li::before{content:"✓";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--orange);color:#fff;font-size:11px;margin-right:10px}
+.dark .btn{display:flex;width:fit-content;margin:40px auto 0;background:#fff;color:var(--ink)}
+.dark .fine{margin-top:18px;font-size:13px;color:#cfc4b2}
+.dark .fine a{font-weight:700;color:#fff}
+.cal{margin:28px auto 0;max-width:560px;border:1.5px dashed rgba(255,255,255,.3);border-radius:18px;padding:18px;font-size:14px;color:#cfc4b2}
+/* fit */
+.fit li{list-style:none;padding:12px 0 12px 28px;border-top:1px solid var(--line);position:relative;font-size:14.5px}
+.fit li::before{position:absolute;left:0;top:12px;font-weight:800}
+.fit ul{padding:0}
+.fit h3{margin-bottom:8px}
+.yes li::before{content:"✓";color:var(--orange)}
+.no li::before{content:"✕";color:var(--red)}
+.inds{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:48px}
+.inds span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600;color:var(--ink)}
+.diff{margin-top:40px;padding:30px 34px;border-radius:24px;background:linear-gradient(120deg,var(--card),var(--peach2));border:1px solid var(--line);text-align:left;color:var(--ink);font-size:17px;line-height:1.55}
+/* faq */
+.faqw{max-width:720px;margin:56px auto 0;text-align:left}
+.grp{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:34px 0 4px}
+.grp:first-child{margin-top:0}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;font-weight:600;font-size:16.5px;color:var(--ink);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:26px;font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 40px 20px 0;font-size:15px}
+/* final */
+.final{border:1px solid var(--line);border-radius:36px;padding:72px 24px 80px;text-align:center;background:linear-gradient(180deg,var(--card) 30%,var(--peach) 220%)}
+.final h2{max-width:18ch;margin:0 auto}
+.final .btns{margin-top:30px}
+footer{padding:128px 0 40px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.8fr) 1fr 1fr;gap:32px;align-items:start}
+footer .big{white-space:nowrap;line-height:1;font-size:clamp(22px,3.4vw,36px);font-weight:700;color:var(--ink);letter-spacing:-.04em;display:flex;align-items:center;gap:10px}
+footer .big b{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:var(--ink);color:var(--bg);font-size:20px}
+footer h4{margin:0 0 10px;font-size:13px;color:var(--body);font-weight:600}
+footer ul{list-style:none;padding:0;display:grid;gap:6px;font-weight:600;color:var(--ink);font-size:15px}
+footer a{text-decoration:none}
+.copy{grid-column:1/-1;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:24px}
+@media (max-width:900px){
+.nav ul{display:none}
+.g3,.g4{grid-template-columns:1fr 1fr}
+.path,.g2{grid-template-columns:1fr}
+.checks{grid-template-columns:1fr;gap:24px}
+section.s{padding-top:88px}
+}
+@media (max-width:560px){.g3,.g4{grid-template-columns:1fr}.free{display:none}footer .wrap{grid-template-columns:1fr}.dark,.final{border-radius:28px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}summary::after{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l3 2"/></symbol>
+<symbol id="ads" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></symbol>
+<symbol id="user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+<symbol id="cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+<symbol id="target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 10-3 6.2M20 5v5h-5"/></symbol>
+<symbol id="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+</defs></svg>
+
+<nav class="nav" aria-label="Main">
+<a class="logo" href="#top"><b>D</b>Dope Digital Works</a>
+<ul><li><a href="#what">What I do</a></li><li><a href="#how">How it works</a></li><li><a href="#fit">Is it for you</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul>
+<a class="btn sm" href="#book">Book a call <i>›</i></a>
+</nav>
+
+<main id="top">
+<header class="hero">
+<div class="wrap">
+
+<h1><span>More <u class="u">Customers</u>. Smoother <u class="u">Operations</u>.</span><span>Powered by <u class="u">AI</u>.</span></h1>
+<p class="sub">I help local service businesses in atlanta get <u class="u">more customers</u> and run <u class="u">smoother operations</u> using AI, automation, and <u class="u">done-for-you systems</u>.</p>
+<div class="vsl" role="region" aria-label="Video"><div class="vsl-in"><button class="play" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button><p>Watch the video</p></div></div>
+<div class="cta"><a class="btn" href="#book">Book a Discovery Call <i>›</i></a><span class="free"><svg viewBox="0 0 54 26" aria-hidden="true"><path d="M52 8C36 2 18 4 6 18M6 18l2-9M6 18l9-1"/></svg>It's free!</span></div>
+
+<div class="pills"><span>Every missed call texted back</span><span>Leads followed up in minutes</span><span>Reviews and referrals on autopilot</span></div>
+<div class="checks">
+<div><b><u class="u">$50k/month</u> potential</b><p>Build a business that gives you real financial freedom.</p></div>
+<div><b>Zero <u class="u">backend work</u></b><p>We handle the systems, you get the results.</p></div>
+<div><b><u class="u">Diagnosis first</u>, build second</b><p>I find where revenue leaks, then build only what your business needs.</p></div>
+</div>
+</div>
+</header>
+
+<div class="built wrap"><p>Built for local service businesses</p>
+<div><span>Roofing</span><span>HVAC</span><span>Solar</span><span>Windows &amp; Siding</span><span>Foundation &amp; Gutters</span><span>Clinics &amp; Med Spas</span><span>Dental</span><span>Mortgage</span><span>Insurance</span><span>Realtors</span></div></div>
+
+<section class="s"><div class="wrap c">
+<h2 class="two bold"><span>Start where you are,</span> <span>then we'll find the right next step</span></h2>
+<div class="grid g3">
+<div class="card tri"><h3>My leads slip through the cracks</h3><p>Calls get missed, follow-up is slow, and no-shows disappear.</p><a class="out" href="#what">See what I fix</a>
+<div class="panel"><span class="st" style="left:12%;top:14%;transform:rotate(-5deg)">Missed calls</span><span class="st" style="right:8%;top:34%;transform:rotate(6deg)">Slow follow-up</span><span class="st" style="left:10%;top:58%;transform:rotate(-4deg)">No-shows</span><span class="st" style="right:14%;top:78%;transform:rotate(4deg)">Price wars</span></div></div>
+<div class="card tri"><h3>I want to see what you actually do</h3><p>Lead generation, instant response, follow-up, and operations.</p><a class="out" href="#how">See how it works</a>
+<div class="panel"><div class="mini"><div data-n="1">Discovery call</div><div data-n="2">Custom growth plan</div><div data-n="3">We build</div></div></div></div>
+<div class="card tri"><h3>I'm ready to fix this now</h3><p>Get a clear diagnosis and next steps on a free 20-minute call.</p><a class="btn sm" href="#book">Book a Discovery Call <i>›</i></a>
+<div class="panel"><div class="bk"><b>Discovery call · 20 min</b><span>Where revenue is leaking</span><span>Your fastest opportunity</span><span>No obligation</span></div></div></div>
+</div>
+</div></section>
+
+<section class="s" id="solve"><div class="wrap c">
+<h2 class="two"><span>Running a local service business</span> <span>shouldn't mean running everything yourself</span></h2>
+<p class="lead">If you run a local service business, you already know the feeling:</p>
+<div class="grid g4">
+<div class="card"><div class="ico"><svg><use href="#phone"/></svg></div><h3>Missed calls = <u class="u">missed revenue</u></h3><p>You miss a call, they call your competitor. That job, or that client, is gone for good.</p></div>
+<div class="card"><div class="ico"><svg><use href="#clock"/></svg></div><h3>Slow follow-up <u class="u">kills deals</u></h3><p>A lead fills out your form and hears nothing for 6 hours. By then they've already booked someone else.</p></div>
+<div class="card"><div class="ico"><svg><use href="#ads"/></svg></div><h3>Ads spend money, <u class="u">not make it</u></h3><p>You're running Meta or Google ads but getting low-quality leads that don't convert, and no idea why.</p></div>
+<div class="card"><div class="ico"><svg><use href="#star"/></svg></div><h3>No system for <u class="u">referrals or reviews</u></h3><p>Happy customers leave and never leave a review. You know you should ask, you just never get around to it.</p></div>
+<div class="card"><div class="ico"><svg><use href="#user"/></svg></div><h3>Everything runs <u class="u">through you</u></h3><p>Quotes, follow-ups, scheduling, reminders. If you stop, everything stops. There's no system, just hustle.</p></div>
+<div class="card"><div class="ico"><svg><use href="#ads"/></svg></div><h3>Inconsistent <u class="u">lead flow</u></h3><p>Some months are great, some are dead. You have no predictable pipeline, just hope and word of mouth.</p></div>
+<div class="card"><div class="ico"><svg><use href="#cal"/></svg></div><h3><u class="u">No-shows</u> and cold leads</h3><p>Appointments get booked and people don't show. Nobody follows up. That slot, and that revenue, just disappears.</p></div>
+<div class="card"><div class="ico"><svg><use href="#tag"/></svg></div><h3>Competing on <u class="u">price instead of value</u></h3><p>Without a strong presence and social proof, the only way to win jobs is to be the cheapest. That's a race to the bottom.</p></div>
+</div>
+<p class="pull">These are not effort problems. They're <u class="u">systems problems</u>, and systems <u class="u">can be fixed</u>.</p>
+<div class="btns"><a class="btn" href="#book">Book a Discovery Call <i>›</i></a></div>
+</div></section>
+
+
+<section class="s" id="about"><div class="wrap about">
+<figure><img src="/founder.jpg" alt="Portrait of the person behind Dope Digital Works, smiling in a pink blazer and pink glasses" width="800" height="1000" loading="lazy"></figure>
+<div>
+<h2>Who you'll be working with</h2>
+<p class="lead">15+ years driving innovation and business growth at Amazon, AWS, Google, and IBM. Two Computer Science degrees with industry-recognized certifications in cloud technology and project management.</p>
+<div class="at"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="#FF9900" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg>Amazon</span><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="#232F3E" d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/></svg>AWS</span><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/></svg>Google</span><span><svg viewBox="0 7 24 10" width="43" height="18" aria-hidden="true" focusable="false"><path fill="#0F62FE" d="M23.544 15.993c.038 0 .06-.017.06-.053v-.036c0-.035-.022-.052-.06-.052h-.09v.14zm-.09.262h-.121v-.498h.225c.112 0 .169.066.169.157 0 .079-.036.129-.09.15l.111.19h-.133l-.092-.17h-.07zm.434-.222v-.062c0-.2-.157-.357-.363-.357a.355.355 0 00-.363.357v.062c0 .2.156.358.363.358a.355.355 0 00.363-.358zm-.838-.03c0-.28.212-.492.475-.492.264 0 .475.213.475.491 0 .279-.211.491-.475.491a.477.477 0 01-.475-.49zM16.21 8.13l-.216-.624h-3.56v.624zm.413 1.19l-.216-.623h-3.973v.624zm2.65 7.147h3.107v-.624h-3.108zm0-1.192h3.107v-.623h-3.108zm0-1.19h1.864v-.624h-1.865zm0-1.191h1.864v-.624h-1.865zm0-1.191h1.864v-.624h-3.555l-.175.504-.175-.504h-3.555v.624h1.865v-.574l.2.574h3.33l.2-.574zm1.864-1.815h-3.142l-.217.624h3.359zm-7.46 3.006h1.865v-.624h-1.865zm0 1.19h1.865v-.623h-1.865zm-1.243 1.191h3.108v-.623h-3.108zm0 1.192h3.108v-.624h-3.108zm6.386-8.961l-.216.624h3.776v-.624zm-.629 1.815h4.19v-.624h-3.974zm-4.514 1.19h3.359l-.216-.623h-3.143zm2.482 2.383h2.496l.218-.624h-2.932zm.417 1.19h1.662l.218-.623h-2.098zm.416 1.191h.83l.218-.623h-1.266zm.414 1.192l.217-.624h-.432zm-12.433-.006l4.578.006c.622 0 1.18-.237 1.602-.624h-6.18zm4.86-3v.624h2.092c0-.216-.03-.425-.083-.624zm-3.616.624h1.865v-.624H6.217zm3.617-3.573h2.008c.053-.199.083-.408.083-.624H9.834zm-3.617 0h1.865v-.624H6.217zM9.55 7.507H4.973v.624h6.18a2.36 2.36 0 00-1.602-.624zm2.056 1.191H4.973v.624h6.884a2.382 2.382 0 00-.25-.624zm-5.39 2.382v.624h4.87c.207-.176.382-.387.519-.624zm4.87 1.191h-4.87v.624h5.389a2.39 2.39 0 00-.519-.624zm-6.114 3.006h6.634c.11-.193.196-.402.25-.624H4.973zM0 8.13h4.352v-.624H0zm0 1.191h4.352v-.624H0zm1.243 1.191h1.865v-.624H1.243zm0 1.191h1.865v-.624H1.243zm0 1.19h1.865v-.623H1.243zm0 1.192h1.865v-.624H1.243zM0 15.276h4.352v-.623H0zm0 1.192h4.352v-.624H0Z"/></svg>IBM</span></div>
+<div class="ast">
+<div class="card svc"><b>15+</b><span>years driving innovation and business growth</span></div>
+<div class="card svc"><b>2</b><span>Computer Science degrees</span></div>
+<div class="card svc"><b>Certified</b><span>in cloud technology and project management</span></div>
+</div>
+<a class="btn" href="#book">Book a Discovery Call <i>&#8250;</i></a>
+</div>
+</div></section>
+<section class="s" id="what"><div class="wrap c">
+<h2 class="two"><span>I don't sell you a service. I <u class="u">diagnose your business</u></span> <span>and <u class="u">build what it actually needs</u>.</span></h2>
+<p class="lead">Most businesses don't have a marketing problem. They have a systems problem: leads falling through gaps, operations running on manual effort, and no infrastructure to convert the attention they're already getting. I come in, find exactly where that is, and fix it.</p>
+<div class="grid g4">
+<div class="card svc"><div class="ico"><svg><use href="#target"/></svg></div><h3>Lead generation</h3><p>AI-powered video ads and content systems that bring in better quality leads at lower cost than what you're running now.</p></div>
+<div class="card svc"><div class="ico"><svg><use href="#bolt"/></svg></div><h3>Instant response</h3><p>Missed call text back and AI voice agents that respond to every lead the moment they reach out, day or night.</p></div>
+<div class="card svc"><div class="ico"><svg><use href="#loop"/></svg></div><h3>Follow-up automation</h3><p>Automated sequences that nurture leads, send reminders, request reviews, and keep your pipeline warm, without you lifting a finger.</p></div>
+<div class="card svc"><div class="ico"><svg><use href="#gear"/></svg></div><h3>Operations on autopilot</h3><p>Booking, confirmations, no-show follow-ups, and internal workflows, all automated so your time stays on the job, not the admin.</p></div>
+</div>
+<div class="diff"><b>Here's how I think about it:</b> your business is already generating some attention, whether that's ad traffic, referrals, walk-ins, or word of mouth. The question is how much of it turns into revenue. In most businesses I work with, the answer is: not enough. And the gap is almost always fixable.</div>
+</div></section>
+<section class="s" id="how"><div class="wrap c">
+<h2>A clear path from first call to live systems</h2>
+<p class="lead">No long onboarding decks. No disappearing after the contract is signed. Typical timeline from discovery call to live systems: 2–4 weeks.</p>
+<div class="path">
+<div class="steps">
+<div class="step on" data-n="1"><h3>Discovery call: we find the gaps</h3><p>A free 20-minute call. I ask how leads come in, where they drop off, and how your operations run. You'll know exactly where revenue is leaking, whether we work together or not.</p></div>
+<div class="step" data-n="2"><h3>Custom growth plan</h3><p>If we're a fit, I map out which systems to build, in which order, and what results to expect. Clear scope, timeline, and investment. No surprises after you sign.</p></div>
+<div class="step" data-n="3"><h3>We build, you stay focused</h3><p>I handle ad creatives, automation builds, AI integrations, and follow-up sequences. You answer a few setup questions and show up to a handoff call. Typical build: 1–3 weeks.</p></div>
+<div class="step" data-n="4"><h3>Go live, then scale</h3><p>Systems go live and I walk you through them, with ongoing support to keep things optimised. As you grow, we build the next layer without your workload growing too.</p></div>
+</div>
+</div>
+<div class="res"><b>A business that generates <u class="u">predictable monthly revenue</u>, without you having to be everywhere at once.</b>Most clients see their first results within the first 30 days of systems going live. The compounding effect builds from there.</div>
+</div></section>
+
+
+<section class="s" id="fit"><div class="wrap c">
+<h2 class="two bold"><span>I work with a specific type of business.</span> <span>Here's how to know if that's you.</span></h2>
+<p class="lead">I'm selective about who I work with, not because I'm turning away business, but because I only take on clients where I know I can make a real difference. This isn't for everyone and that's intentional.</p>
+<div class="grid g2 fit">
+<div class="card yes"><h3>This is for you if</h3><ul>
+<li>You already have customers coming in, through referrals, ads, or word of mouth, but know you're losing some along the way</li>
+<li>You're spending on marketing but not seeing consistent returns and want to fix that</li>
+<li>You want your business to run smoother without hiring more staff or working longer hours</li>
+<li>You're based in the US, UK, Canada, or Australia</li>
+<li>You're open to using AI and automation to do the heavy lifting, and you want someone to build it for you</li></ul></div>
+<div class="card no"><h3>This is not for you if</h3><ul>
+<li>You're just starting out with no existing customers or revenue, so there's nothing to build on yet</li>
+<li>You want overnight results. Systems take a few weeks to build and compound over time</li>
+<li>You're not willing to invest in your business. Good systems cost money and pay back multiples</li>
+<li>You want to micromanage every decision. I work best when given the space to do the work properly</li>
+<li>You're looking for a cheap offshore vendor. That's not what this is</li></ul></div>
+</div>
+<div class="inds"><span>Roofing</span><span>HVAC</span><span>Solar</span><span>Windows &amp; Siding</span><span>Foundation &amp; Gutters</span><span>Clinics &amp; Med Spas</span><span>Dental Practices</span><span>Mortgage Brokers</span><span>Insurance Brokers</span><span>Realtors</span></div>
+<div class="diff"><b>Why this is different.</b> I'm not an agency that sells you a package and disappears. I work with a small number of businesses at a time, which means I actually look at your setup, understand your specific gaps, and build systems that fit your business. If I get on a call and I don't think I can genuinely move the needle for you, I'll tell you that upfront.</div>
+</div></section>
+
+<section class="s"><div class="wrap">
+<div class="dark" id="book">
+<h2>Book a <u class="u">free 20-minute</u> discovery call</h2>
+<p class="lead">I'll look at where you are right now and map out exactly which systems will move the needle fastest for your business. No pitch. No pressure. Just a clear plan for what's possible.</p>
+<h3>What you'll leave with:</h3>
+<ul><li>A clear picture of your fastest revenue opportunity</li><li>No obligation to move forward</li><li>A plan, whether we work together or not</li></ul>
+
+<a class="btn" href="#book">Book Your Free Discovery Call <i>›</i></a>
+<p class="fine">Prefer to talk? Call or text <a href="tel:+13465404100">+1 346 540 4100</a><br>I work with a small number of businesses at a time. Spots fill up, so book sooner rather than later.</p>
+</div>
+</div></section>
+<section class="s" id="faq"><div class="wrap c">
+<h2 class="two bold"><span>Frequently asked questions</span></h2>
+<p class="lead">If something isn't covered here, bring it to the discovery call. That's exactly what it's for.</p>
+<div class="faqw">
+<p class="grp">Trust and credibility</p>
+<details><summary>Where are you based and does that affect how we work together?</summary><p>I work with local service businesses in the US, UK, Canada, and Australia. Everything runs remotely, and the 20-minute call is the easiest way to confirm we can work at times that suit you.</p></details>
+<details><summary>Are you an agency or a one-person operation?</summary><p>I'm not an agency that sells a package and disappears. I work with a small number of businesses at a time so I can look closely at your setup and build around it.</p></details>
+<details><summary>Have you worked with businesses in my industry before?</summary><p>I focus on roofing, HVAC, solar, windows and siding, foundation and gutters, clinics and med spas, dental practices, mortgage and insurance brokers, and realtors. Ask on the call and I'll talk through what applies to yours.</p></details>
+<details><summary>Why should I trust someone I found through a cold email?</summary><p>You shouldn't have to take my word for it. The discovery call is free and has no pitch, and you leave with a clear diagnosis of your biggest gap whether we work together or not.</p></details>
+<p class="grp">The process</p>
+<details><summary>How long does it take to get everything live?</summary><p>Typical build time is 1–3 weeks depending on scope. From discovery call to live systems usually takes 2–4 weeks.</p></details>
+<details><summary>How much of my time does this actually take?</summary><p>Very little. You answer a few setup questions at the start and show up to a handoff call when it's done.</p></details>
+<details><summary>Do I need to understand AI or be technical?</summary><p>No. It's done for you, and I walk you through how everything works at handoff.</p></details>
+<details><summary>What tools and platforms do you use?</summary><p>That depends on your business. Your custom plan names the exact systems and tools before you commit to anything.</p></details>
+<p class="grp">Money and commitment</p>
+<details><summary>How much does this cost?</summary><p>It depends on what your business needs, because I don't sell fixed packages. Your plan lays out a clear scope, timeline, and investment before you sign.</p></details>
+<details><summary>Am I locked into a long term contract?</summary><p>Terms are covered in your plan before you commit, so there are no surprises. The discovery call itself carries no obligation.</p></details>
+<details><summary>What if the systems don't perform?</summary><p>That's why I diagnose first and only take on clients where I know I can make a real difference. If I don't think I can move the needle, I'll tell you upfront. After launch, ongoing support keeps things optimised.</p></details>
+<details><summary>Is this worth it if my business is still small?</summary><p>If you already have customers coming in and know you're losing some along the way, there's something to build on. If you're just starting out with no customers or revenue, it's probably too early.</p></details>
+<p class="grp">The discovery call</p>
+<details><summary>What actually happens on the discovery call?</summary><p>It's 20 minutes. I ask about your current setup: how leads come in, where they drop off, and how your operations run. You leave knowing where your revenue is leaking.</p></details>
+<details><summary>Is there a hard pitch at the end?</summary><p>No. No pitch, no pressure, no obligation to move forward.</p></details>
+<details><summary>What if I'm not ready to start right away?</summary><p>That's fine. You still leave with a clear picture of your fastest revenue opportunity, and you decide when, or whether, to move forward.</p></details>
+<details><summary>I've been burned by agencies before. How is this different?</summary><p>You work directly with me, not a rotating team. I look at your specific gaps, build a plan for your business, and stay on after launch. If I'm not the right fit, I'll say so on the call.</p></details>
+</div>
+</div></section>
+
+<section class="s"><div class="wrap"><div class="final">
+<h2>Still have a question that isn't covered here?</h2>
+<p class="lead">Bring it to the discovery call. That's exactly what it's for.</p>
+<div class="btns"><a class="btn" href="#book">Book Your Free Discovery Call <i>›</i></a><a class="out" href="tel:+13465404100">Call +1 346 540 4100</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="big"><b>D</b>Dope Digital Works</div>
+<div><h4>Page</h4><ul><li><a href="#what">What I do</a></li><li><a href="#how">How it works</a></li><li><a href="#fit">Is it for you</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><a href="tel:+13465404100">+1 346 540 4100</a></li><li><a href="#book">Book a call</a></li></ul></div>
+<div class="copy"><span>© Dope Digital Works</span><span>AI, automation, and done-for-you systems for local service businesses</span></div>
+</div></footer>
+<script>
+(function(){
+var d=document.documentElement;d.classList.add('js');
+var sel='.hero .chip,.hero h1,.hero .sub,.vsl,.cta,.pills span,.checks>div,.built,.s h2,.s .lead,.card,.mini div,.pv,.about figure,.ast .card,.step,.res,.pull,.diff,.inds span,.dark,.grp,details,.final,.btns,footer .wrap>div';
+var els=document.querySelectorAll(sel),counts=new Map();
+els.forEach(function(el){var p=el.parentElement,n=counts.get(p)||0;counts.set(p,n+1);el.style.setProperty('--d',(Math.min(n,5)*0.05)+'s');el.classList.add('rv');});
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.01,rootMargin:'0px 0px 6% 0px'});
+els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
+
