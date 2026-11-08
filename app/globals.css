@@ -342,6 +342,32 @@ section.s {
   background: rgba(0, 0, 0, 0.12);
 }
 
+.vsl-buffering {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.vsl-spinner {
+  width: 52px;
+  height: 52px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #d95d39;
+  border-radius: 50%;
+  animation: vsl-spin 0.75s linear infinite;
+}
+
+@keyframes vsl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .vsl-in {
   position: relative;
   text-align: center;

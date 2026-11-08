@@ -7,6 +7,7 @@ export default function LandingPage() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isVideoBuffering, setIsVideoBuffering] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isNavScrolled, setIsNavScrolled] = useState(false);
@@ -14,8 +15,14 @@ export default function LandingPage() {
 
   const handlePlayVideo = () => {
     if (videoRef.current) {
-      videoRef.current.play();
       setIsPlaying(true);
+      setIsVideoBuffering(true);
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => setIsVideoBuffering(false))
+          .catch(() => setIsVideoBuffering(false));
+      }
     }
   };
 
@@ -272,14 +279,29 @@ export default function LandingPage() {
               <video
                 ref={videoRef}
                 src="/vsl.mp4"
+                poster="/vsl-poster.webp"
                 className="vsl-video"
                 playsInline
                 controls={isPlaying}
-                preload="metadata"
-                onPlay={() => setIsPlaying(true)}
+                preload="auto"
+                onPlay={() => {
+                  setIsPlaying(true);
+                  setIsVideoBuffering(false);
+                }}
+                onPlaying={() => setIsVideoBuffering(false)}
+                onWaiting={() => setIsVideoBuffering(true)}
+                onCanPlay={() => setIsVideoBuffering(false)}
                 onPause={() => setIsPlaying(false)}
-                onEnded={() => setIsPlaying(false)}
+                onEnded={() => {
+                  setIsPlaying(false);
+                  setIsVideoBuffering(false);
+                }}
               />
+              {isPlaying && isVideoBuffering && (
+                <div className="vsl-buffering" aria-label="Buffering video...">
+                  <div className="vsl-spinner" />
+                </div>
+              )}
               {!isPlaying && (
                 <div
                   className="vsl-overlay"
@@ -484,13 +506,18 @@ export default function LandingPage() {
         <section className="s" id="about">
           <div className="wrap about">
             <figure>
-              <img
-                src="/founder.jpg"
-                alt="Portrait of the person behind Dope Digital Works, smiling in a pink blazer and pink glasses"
-                width={800}
-                height={1000}
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet="/founder.webp" type="image/webp" />
+                <img
+                  src="/founder.jpg"
+                  alt="Portrait of the person behind Dope Digital Works, smiling in a pink blazer and pink glasses"
+                  width={819}
+                  height={1024}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
             </figure>
             <div>
               <h2>Who you'll be working with</h2>
@@ -1057,9 +1084,11 @@ export default function LandingPage() {
             <div className="video-container">
               <video
                 src="/vsl.mp4"
+                poster="/vsl-poster.webp"
                 controls
                 autoPlay
                 playsInline
+                preload="auto"
                 style={{ width: "100%", height: "100%", borderRadius: "14px", objectFit: "contain" }}
               />
             </div>

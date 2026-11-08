@@ -34,6 +34,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Caveat:wght@600&display=swap"
           rel="stylesheet"
         />
+        <link rel="preload" href="/founder.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/vsl-poster.webp" as="image" type="image/webp" />
       </head>
       <body>{children}</body>
     </html>
